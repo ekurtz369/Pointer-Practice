@@ -18,7 +18,7 @@ int main() {
 }*/
 
 
-#include <iostream>
+/*#include <iostream>
 
 using namespace std;
 
@@ -34,4 +34,21 @@ int main() {
     }
 
     cout << *max_ptr;
+}*/
+
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    char array[] = "abcde";
+    char* ptr = array;
+
+    while (*ptr != '\0') {
+        ptr++;
+    }
+
+    cout << ptr - array;
 }
