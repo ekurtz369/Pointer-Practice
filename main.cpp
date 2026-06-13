@@ -54,7 +54,7 @@ int main() {
 }*/
 
 
-#include <iostream>
+/*#include <iostream>
 
 using namespace std;
 
@@ -73,4 +73,36 @@ int main() {
         cout << *ptr;
         ptr--;
     }
+}*/
+
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+
+    //vector<int> v = { 1,7,34,9,0,5,3,28,6 };
+    vector<int> v = { 1,7,34,9,5,3,28,6 };
+    int* ptr_beg = &v[0];
+    int* ptr_end = &v[v.size() - 1];
+
+    int midpoint;
+
+    for (int i = 0; i < v.size(); i++) {
+        ptr_beg++;
+        ptr_end--;
+
+        if (ptr_beg == ptr_end) {
+            midpoint = *ptr_beg;
+            break;
+        }
+        else if (ptr_beg > ptr_end) {
+            midpoint = *ptr_end;
+            break;
+        }
+    }
+    
+    cout << midpoint;
 }
