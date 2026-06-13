@@ -37,7 +37,7 @@ int main() {
 }*/
 
 
-#include <iostream>
+/*#include <iostream>
 
 using namespace std;
 
@@ -51,4 +51,26 @@ int main() {
     }
 
     cout << ptr - array;
+}*/
+
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    char array[] = "abcde";
+    char* ptr = array;
+
+    while (*ptr != '\0') {
+        ptr++;
+    }
+
+    int cells = ptr - array;
+
+    for (int i = 0; i <= cells; i++) {
+        cout << *ptr;
+        ptr--;
+    }
 }
